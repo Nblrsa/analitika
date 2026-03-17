@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Задержка 1 секунда для имитации сети
                 setTimeout(() => {
                     // Подсказка для разработчика: здесь можно вызвать пиксели বা метрики
-                    // if (typeof ym !== 'undefined') { ym(12345678, 'reachGoal', 'lead_form'); }
+                    if (typeof ym !== 'undefined') { ym(107738327, 'reachGoal', 'lead_form_submit'); }
                     
                     form.reset();
                     form.querySelectorAll('.form-group').forEach(group => {
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const serviceName = card ? card.querySelector('.service-card__title').textContent : 'Неизвестная услуга';
             
             console.log(`[Analytics] Событие: click_service_booking, Услуга: ${serviceName}`);
-            // if (typeof ym !== 'undefined') { ym(XXXXXX, 'reachGoal', 'click_service_booking', { service: serviceName }); }
+            if (typeof ym !== 'undefined') { ym(107738327, 'reachGoal', 'click_service_booking', { service: serviceName }); }
             // if (typeof gtag !== 'undefined') { gtag('event', 'click_service_booking', { service_name: serviceName }); }
         });
     });
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
             block.style.cursor = 'pointer'; // Делаем кликабельным визуально
             block.addEventListener('click', () => {
                 console.log(`[Analytics] Событие: click_phone_number`);
-                // if (typeof ym !== 'undefined') { ym(XXXXXX, 'reachGoal', 'click_phone_number'); }
+                if (typeof ym !== 'undefined') { ym(107738327, 'reachGoal', 'click_phone_number'); }
                 // if (typeof gtag !== 'undefined') { gtag('event', 'click_phone_number'); }
             });
         }
@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (item.classList.contains('active')) {
                 const questionText = headerBtn.textContent.replace('+', '').trim();
                 console.log(`[Analytics] Событие: faq_expand, Вопрос: ${questionText}`);
-                // if (typeof ym !== 'undefined') { ym(XXXXXX, 'reachGoal', 'faq_expand', { question: questionText }); }
+                if (typeof ym !== 'undefined') { ym(107738327, 'reachGoal', 'faq_expand', { question: questionText }); }
                 // if (typeof gtag !== 'undefined') { gtag('event', 'faq_expand', { faq_question: questionText }); }
             }
         });
